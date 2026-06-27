@@ -6,6 +6,12 @@
 
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        # This solution works by continually "popping" from whichever
+        # list has a smaller head and appending it to an output list,
+        # until we've fully traversed both lists. We need somewhere to
+        # append to, so we have a pseudo-head node that we'll append
+        # to. Obviously that node isn't a part of the merged list, so
+        # we'll simply return its `.next` as our final value.
         pseudo_head = node = ListNode()
         
         # Continually "pop" a node from the start of one of the two
