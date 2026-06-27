@@ -12,6 +12,9 @@ class Solution:
         if not list2:
             return list1
 
+        # Effectively, this solution works by picking one of the input lists to be
+        # a "main" list and the other as a "donor" list to merge nodes into the
+        # main list from.
         main_current = list1 if list1.val <= list2.val else list2
         donor_current = list1 if list1.val > list2.val else list2
 
