@@ -21,10 +21,10 @@ class NumMatrix:
 
     def sumRegion(self, row1: int, col1: int, row2: int, col2: int) -> int:
         # Add the full prefix matrix sum, and subtract the regions above
-        # and to the left of it. The above and left matrices will overlap
-        # on the diagonal from the top-left corner, counting that region
-        # twice. We fix this by subtracting one copy of the sum of that
-        # overlapping region.
+        # and to the left of it. The above and left matrices that we're
+        # subtracting will overlap, and subtract the region on the diagonal
+        # from the top-left corner twice, so we fix this by adding back one
+        # copy of the sum of that region.
         return self.sum_matrix[row2 + 1][col2 + 1] - self.sum_matrix[row2 + 1][col1] - self.sum_matrix[row1][col2 + 1] + self.sum_matrix[row1][col1]
 
 
