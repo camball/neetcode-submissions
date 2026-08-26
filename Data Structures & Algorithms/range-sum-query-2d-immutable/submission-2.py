@@ -24,7 +24,7 @@ class NumMatrix:
         # and to the left of it. The above and left matrices will overlap
         # on the diagonal from the top-left corner, counting that region
         # twice. We fix this by subtracting one copy of the sum of that
-        # overlappting region.
+        # overlapping region.
         return self.sum_matrix[row2 + 1][col2 + 1] - self.sum_matrix[row2 + 1][col1] - self.sum_matrix[row1][col2 + 1] + self.sum_matrix[row1][col1]
 
 
