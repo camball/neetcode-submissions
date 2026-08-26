@@ -11,7 +11,7 @@ class NumMatrix:
 
     def sumRegion(self, row1: int, col1: int, row2: int, col2: int) -> int:
         region_sum = 0
-        for row in self.prefix_sum_matrix[row1:row2 + 1]: # TODO: OOB error
+        for row in self.prefix_sum_matrix[row1:row2 + 1]:
             l_sum = 0 if col1 == 0 else row[col1 - 1]
             r_sum = row[col2]
 
