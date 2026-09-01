@@ -1,7 +1,3 @@
-# Note: This question was done on LeetCode, not NeetCode, as NeetCode
-# doesn't have this question. As such, manually adding my solutions
-# to this repo for posterity.
-
 class Solution:
     def calculate(self, s: str) -> int:
         num = 0  # For building string parsing
